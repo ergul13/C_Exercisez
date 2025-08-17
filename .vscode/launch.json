@@ -15,16 +15,16 @@
       },
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "gdb için düzgün yazdırmayı etkinleştir",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "gdb için düzgün yazdırmayı etkinleştir",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -45,16 +45,16 @@
       },
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "gdb için düzgün yazdırmayı etkinleştir",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "gdb için düzgün yazdırmayı etkinleştir",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -64,16 +64,16 @@
       "program": "Program adını girin, örneğin: ${workspaceFolder}/a.out",
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "gdb için düzgün yazdırmayı etkinleştir",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "gdb için düzgün yazdırmayı etkinleştir",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -88,16 +88,16 @@
       "externalConsole": false,
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "gdb için düzgün yazdırmayı etkinleştir",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "gdb için düzgün yazdırmayı etkinleştir",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -118,6 +118,32 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "name": "C/C++: gcc etkin dosyayı derle ve dosyada hata ayıkla",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "gdb için düzgün yazdırmayı etkinleştir",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: gcc etkin dosyayı derle",
+      "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
 }
