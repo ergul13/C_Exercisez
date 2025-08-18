@@ -2,127 +2,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Başlat",
+      "name": "C: run active file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "Program adını girin, örneğin: ${workspaceFolder}/a.out",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
       "args": [],
-      "stopAtEntry": false,
       "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
+      "preLaunchTask": "C: build active file",
       "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "gdb için düzgün yazdırmayı etkinleştir",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Kanal Ekleme",
-      "type": "cppdbg",
-      "request": "attach",
-      "program": "Program adını girin, örneğin: ${workspaceFolder}/a.out",
-      "processId": "${command:pickRemoteProcess}",
-      "pipeTransport": {
-        "debuggerPath": "/usr/bin/gdb",
-        "pipeProgram": "/usr/bin/ssh",
-        "pipeArgs": [],
-        "pipeCwd": ""
-      },
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "gdb için düzgün yazdırmayı etkinleştir",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Kanal Başlatma",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "Program adını girin, örneğin: ${workspaceFolder}/a.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "pipeTransport": {
-        "debuggerPath": "/usr/bin/gdb",
-        "pipeProgram": "/usr/bin/ssh",
-        "pipeArgs": [],
-        "pipeCwd": ""
-      },
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "gdb için düzgün yazdırmayı etkinleştir",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Ekle",
-      "type": "cppdbg",
-      "request": "attach",
-      "program": "Program adını girin, örneğin: ${workspaceFolder}/a.out",
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "gdb için düzgün yazdırmayı etkinleştir",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Başlat",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "Program adını girin, örneğin: ${workspaceFolder}/a.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "gdb için düzgün yazdırmayı etkinleştir",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
+      "miDebuggerPath": "/usr/bin/gdb",
+      "console": "integratedTerminal"
     },
     {
       "name": "C/C++ Runner: Debug Session",
@@ -142,32 +31,6 @@
           "ignoreFailures": true
         }
       ]
-    },
-    {
-      "name": "C/C++: gcc etkin dosyayı derle ve dosyada hata ayıkla",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "gdb için düzgün yazdırmayı etkinleştir",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Ayrıştırılmış Kod Varyantını Intel olarak ayarla",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "C/C++: gcc etkin dosyayı derle",
-      "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
 }
